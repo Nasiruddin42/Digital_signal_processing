@@ -29,6 +29,8 @@ plt.ylabel('Amplitude')
 sampling_rate = 320 # nyquist rate = 2*F(max)
 t = np.arange(s_length)/sampling_rate
 x = 10*np.sin(2*np.pi*40*t) + 20*np.sin(2*np.pi*80*t) + 40*np.sin(2*np.pi*160*t)
+x = x[:10]
+t = t[:10]
 
 plt.subplot(3,2,2)
 plt.plot(t,x)
@@ -39,6 +41,8 @@ plt.ylabel('Amplitude')
 sampling_rate = 640 # over sampling
 t = np.arange(s_length)/sampling_rate
 x = 10*np.sin(2*np.pi*40*t) + 20*np.sin(2*np.pi*80*t) + 40*np.sin(2*np.pi*160*t)
+x = x[:20]
+t = t[:20]
 
 plt.subplot(3,2,3)
 plt.plot(t,x)
@@ -49,6 +53,8 @@ plt.ylabel('Amplitude')
 sampling_rate = 160 # Down sampling
 t = np.arange(s_length)/sampling_rate
 x = 10*np.sin(2*np.pi*40*t) + 20*np.sin(2*np.pi*80*t) + 40*np.sin(2*np.pi*160*t)
+x = x[:5]
+t = t[:5]
 
 plt.subplot(3,2,4)
 plt.plot(t,x)
